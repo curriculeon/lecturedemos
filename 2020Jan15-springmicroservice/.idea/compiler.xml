@@ -6,11 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="maven-template-project" />
+        <module name="myprojectdemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="maven-template-project" target="8" />
+      <module name="myprojectdemo" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="myprojectdemo" options="-parameters" />
+    </option>
   </component>
 </project>
