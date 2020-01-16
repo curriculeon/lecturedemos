@@ -38,4 +38,17 @@ public class PersonService {
         personRepository.delete(personToBeDeleted);
         return personToBeDeleted;
     }
+
+
+    public Person update(Long id, Person newPersonData) {
+        Person personInDatabase = findById(id);
+        String newFirstName = newPersonData.getFirstName();
+        String newLastName = newPersonData.getLastName();
+
+        personInDatabase.setFirstName(newFirstName);
+        personInDatabase.setLastName(newLastName);
+        personRepository.save(personInDatabase);
+
+        return personInDatabase;
+    }
 }

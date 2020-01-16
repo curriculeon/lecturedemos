@@ -49,6 +49,13 @@ public class PersonController {
         return response;
     }
 
+    @RequestMapping(value = "/person", method = RequestMethod.PUT)
+    public ResponseEntity<?> update(@PathVariable Long id, Person newPersonData) {
+        Person person = service.update(id, newPersonData);
+        ResponseEntity<?> response = new ResponseEntity<>(person, HttpStatus.OK);
+        return response;
+    }
+
 
 
 }
