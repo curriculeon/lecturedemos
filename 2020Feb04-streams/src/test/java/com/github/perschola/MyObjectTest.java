@@ -1,4 +1,4 @@
-package com.github.curriculeon;
+package com.github.perschola;
 
 import org.junit.Assert;
 import org.junit.Test;
